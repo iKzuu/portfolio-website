@@ -23,7 +23,7 @@ const PixelImage = () => {
                     <p style={{ fontWeight: 900, fontSize: "3rem", color: "#78AEFF" }}>iKzuu!</p>
                 </div>
             }
-            gridSize={12}
+            gridSize={24}
             pixelColor='#78AEFF'
             animationStepDuration={0.4}
             className="custom-pixel-card"
