@@ -17,7 +17,7 @@ const HeroSection = () => {
                     </div>
                 </div>
                 <div className="col-span-6 place-self-center mt-4 lg:mt-0">
-                    <div className="rounded-xl bg-[#D9D9D9] w-[300px] h-[300px] relative border-4 border-[#78AEFF] block lg:hidden">
+                    <div className="rounded-xl bg-[#f6f6f6] w-[300px] h-[300px] relative border-4 border-[#78AEFF] block lg:hidden">
                         <Image
                             src="/images/ikzuu.png"
                             alt="ikzuu"

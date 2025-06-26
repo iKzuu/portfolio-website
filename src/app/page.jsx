@@ -8,12 +8,12 @@ export default function Home() {
     <main className="flex min-h-screen flex-col bg-[#f6f6f6]">
       <Navbar />
       {/* Hero */}
-      <div className="mt-36 md:my-44 px-12 py-4">
+      <div className="mt-28 md:my-44 px-12 py-4">
         <HeroSection />
       </div>
       <ScrollVelo />
       {/* About */}
-      <div className="px-5 md:px-0 md:py-0">
+      <div className="px-10 md:px-0 md:py-0">
         <AboutSection />
       </div>
     </main>

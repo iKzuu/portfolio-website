@@ -12,7 +12,7 @@ const data_tab = [
                 <li>Javascript</li>
                 <li>Python</li>
                 <li>C++</li>
-                <li>CSS</li>
+                <li>Tailwind CSS</li>
                 <li>Node.js</li>
             </ul>
         ),
