@@ -1,7 +1,8 @@
-import AboutSection from "./components/AboutSection";
-import HeroSection from "./components/HeroSection";
-import Navbar from "./components/Navbar";
-import ScrollVelo from "./components/Utils/ScrollVelo";
+import AboutSection from "../components/AboutSection";
+import HeroSection from "../components/HeroSection";
+import Navbar from "../components/Navbar";
+import ProjectSection from "../components/ProjectSection";
+import ScrollVelo from "../components/Utils/ScrollVelo";
 
 export default function Home() {
   return (
@@ -15,6 +16,9 @@ export default function Home() {
       {/* About */}
       <div className="px-10 md:px-0 md:py-0">
         <AboutSection />
+      </div>
+      <div>
+        {/* <ProjectSection /> */}
       </div>
     </main>
   );
