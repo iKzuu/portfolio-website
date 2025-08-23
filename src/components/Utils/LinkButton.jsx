@@ -10,7 +10,7 @@ const LinkButton = () => {
             alt: "github-icon",
         },
         {
-            href: "https://github.com/iKzuu",
+            href: "https://www.instagram.com/ikzuu_?igsh=MXBsajI5a2dmYnBr",
             iconSrc: "images/icon/instagram.svg",
             alt: "instagram-icon",
         },

@@ -5,9 +5,11 @@ import Tabs from "./Utils/Tabs";
 const AboutSection = () => {
     return (
         <section>
-            <div className="grid grid-cols-1 sm:grid-cols-1 relative">
-                <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
-                <div className="w-auto md:pl-10 md:max-w-2xl absolute right-60">
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:relative">
+                <div className="hidden md:block m-0 p-0">
+                    <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+                </div>
+                <div className="w-auto md:pl-10 md:max-w-2xl md:absolute md:right-52">
                     <div className="space-y-5 lg:space-y-10">
                         <h1 className={`${pixel.className} text-[#272727] text-center md:text-start text-4xl lg:text-6xl font-extrabold`}>
                             About Me
@@ -17,7 +19,9 @@ const AboutSection = () => {
                             I’m Anang Setiaji, a junior frontend developer and graphic designer who loves coding with JavaScript, Python, and C++. I build responsive websites with Next.js and Tailwind CSS, and create visual designs using Adobe Illustrator and CorelDRAW.
                         </p>
                     </div>
-                    <Tabs />
+                    <div>
+                        <Tabs />
+                    </div>
                 </div>
             </div>
         </section>

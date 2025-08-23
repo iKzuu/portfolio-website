@@ -9,7 +9,7 @@ const TypeTextAnimation = () => {
         1500,
         'Setiaji',
         1500,
-        'Front-End',
+        'Frontend',
         1500,
         'Designer',
         1500

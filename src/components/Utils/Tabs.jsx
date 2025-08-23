@@ -34,7 +34,6 @@ const data_tab = [
         id: "education",
         content: (
             <ul className={`${poppins.className} list-disc list-inside pl-2 text-[#272727] md:text-lg space-y-2`}>
-                <li>SMK Negeri 5 Surakarta</li>
                 <li>STMIK AMIKOM Surakarta</li>
             </ul>
         ),

@@ -1,5 +1,3 @@
-import ScrollFloat from "./ScrollFloat/ScrollFloat";
-
 const ProjectSection = () => {
     return (
         <section>
