@@ -6,7 +6,7 @@ import ScrollVelo from "../components/Utils/ScrollVelo";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#f6f6f6]">
+    <main className="flex min-h-screen flex-col bg-dark">
       <Navbar />
       {/* Hero */}
       <div className="mt-28 md:my-44 px-12 py-4">

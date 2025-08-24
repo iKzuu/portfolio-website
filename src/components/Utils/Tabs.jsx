@@ -2,18 +2,19 @@
 import TabButton from "./TabButton";
 import { pixel, poppins } from "@/app/ui/font";
 import { useState, useTransition } from "react";
+import Image from "next/image";
 
 const data_tab = [
     {
         title: "Programming",
         id: "programming",
         content: (
-            <ul className={`${poppins.className} list-disc list-inside pl-2 text-[#272727] md:text-lg space-y-2`}>
-                <li>Javascript</li>
-                <li>Python</li>
-                <li>C++</li>
-                <li>Tailwind CSS</li>
-                <li>Node.js</li>
+            <ul className={`${poppins.className} list-disc list-inside pl-2 text-light md:text-lg space-y-2`}>
+                <li className="marker:text-yellow-300">Javascript</li>
+                <li className="marker:text-custom-color">Python</li>
+                <li className="marker:text-blue-600">C++</li>
+                <li className="marker:text-custom-color-2">Tailwind CSS</li>
+                <li className="marker:text-green-400">Node.js</li>
             </ul>
         ),
     },
@@ -21,11 +22,11 @@ const data_tab = [
         title: "Design",
         id: "design",
         content: (
-            <ul className={`${poppins.className} list-disc list-inside pl-2 text-[#272727] md:text-lg space-y-2`}>
-                <li>Adobe Illustrator</li>
-                <li>Adobe Photoshop</li>
-                <li>CorelDraw</li>
-                <li>Figma</li>
+            <ul className={`${poppins.className} list-disc list-inside pl-2 text-light md:text-lg space-y-2`}>
+                <li className="marker:text-[#e08200]">Adobe Illustrator</li>
+                <li className="marker:text-[#2d9def]">Adobe Photoshop</li>
+                <li className="marker:text-[#2cbf2d]">CorelDraw</li>
+                <li className="marker:text-[#E4004B]">Figma</li>
             </ul>
         ),
     },
@@ -33,8 +34,18 @@ const data_tab = [
         title: "Education",
         id: "education",
         content: (
-            <ul className={`${poppins.className} list-disc list-inside pl-2 text-[#272727] md:text-lg space-y-2`}>
-                <li>STMIK AMIKOM Surakarta</li>
+            <ul className={`${poppins.className} list-disc list-inside pl-2 text-light text-sm md:text-lg space-y-2`}>
+                <li className="marker:text-[#882982] text-justify">
+                    <span>STMIK AMIKOM Surakarta</span>
+                    <span className="block text-xs md:text-sm text-semi-light text-wrap">Bachelor's Degree in Informatics (2024 - Present)</span>
+                    <Image 
+                        src="https://www.amikomsolo.ac.id/wp-content/uploads/2020/01/logo-amikom-surakarta-1-300x300.png"
+                        alt="amikom"
+                        width={300}
+                        height={300}
+                        className="mt-2 mb-4 w-[100px] md:w-[200px] h-auto"
+                    />
+                </li>
             </ul>
         ),
     }
@@ -52,8 +63,8 @@ const Tabs = () => {
     };
 
     return (
-        <div className="flex flex-col">
-            <div className={`${pixel.className} flex flex-row justify-start gap-2 mt-8 text-lg md:text-2xl`}>
+        <div className="flex flex-col mt-8 p-6 bg-dark/60 backdrop-blur-sm shadow-md shadow-custom-color/10 rounded-lg md:min-h-[400px]">
+            <div className={`${pixel.className} flex flex-row justify-start gap-2 text-lg md:text-2xl`}>
                 <TabButton
                     selectTab={() => handleTabChange("programming")}
                     active={tab === "programming"}
