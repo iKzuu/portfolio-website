@@ -14,6 +14,9 @@
   --color-semi-light: #C9CDCF;
   --color-custom-color: #78AEFF;
   --color-custom-color-2: #84FFEB;
+  --shadow-around: 0 0 10px #78AEFF80;
+  --shadow-around-more-range: 0 0 20px #78AEFF;
+  --background-image-pattern: url('https://i0.wp.com/www.thewargamespot.com/wp-content/uploads/2017/03/dark-pattern-backgrounds-wallpaper-2.jpg?fit=1600%2C1000&ssl=1');
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

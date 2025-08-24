@@ -9,16 +9,16 @@ export default function Home() {
     <main className="flex min-h-screen flex-col bg-dark">
       <Navbar />
       {/* Hero */}
-      <div className="mt-28 md:my-44 px-12 py-4">
+      <div className="mt-28 md:mt-32 md:my-20 lg:my-44 px-12 py-4">
         <HeroSection />
       </div>
       <ScrollVelo />
       {/* About */}
-      <div className="px-10 md:px-0 md:py-0">
+      <div className="lg:px-0 lg:py-0">
         <AboutSection />
       </div>
       <div>
-        {/* <ProjectSection /> */}
+        <ProjectSection />
       </div>
     </main>
   );

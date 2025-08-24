@@ -9,20 +9,33 @@ const data_tab = [
         title: "Programming",
         id: "programming",
         content: (
-            <ul className={`${poppins.className} list-disc list-inside pl-2 text-light md:text-lg space-y-2`}>
-                <li className="marker:text-yellow-300">Javascript</li>
-                <li className="marker:text-custom-color">Python</li>
-                <li className="marker:text-blue-600">C++</li>
-                <li className="marker:text-custom-color-2">Tailwind CSS</li>
-                <li className="marker:text-green-400">Node.js</li>
-            </ul>
+            <div className="flex flex-row space-x-10">
+                <ul className={`${poppins.className} list-disc list-inside pl-2 text-light text-sm md:text-lg space-y-2`}>
+                    <li className="marker:text-yellow-300">Javascript</li>
+                    <li className="marker:text-custom-color">Python</li>
+                    <li className="marker:text-blue-600">C++</li>
+                    <li className="marker:text-custom-color-2">Tailwind CSS</li>
+                    <li className="marker:text-green-400">Node.js</li>
+                </ul>
+                <div className="flex flex-row md:flex-col space-y-6 space-x-4">
+                    <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+                        <Image src="images/icon/javascript.svg" width={60} height={60} alt="javascript" className="w-10 md:w-[60px] h-auto"/>
+                        <Image src="images/icon/python.svg" width={60} height={60} alt="python" className="w-10 md:w-[60px] h-auto"/>
+                        <Image src="images/icon/cpp.svg" width={60} height={60} alt="cpp" className="w-10 md:w-[60px] h-auto"/>
+                    </div>
+                    <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+                        <Image src="images/icon/tailwind-css.svg" width={60} height={60} alt="javascript" className="w-10 md:w-[60px] h-auto"/>
+                        <Image src="images/icon/node-js.svg" width={60} height={60} alt="python" className="w-10 md:w-[60px] h-auto"/>
+                    </div>
+                </div>
+            </div>
         ),
     },
     {
         title: "Design",
         id: "design",
         content: (
-            <ul className={`${poppins.className} list-disc list-inside pl-2 text-light md:text-lg space-y-2`}>
+            <ul className={`${poppins.className} list-disc list-inside pl-2 text-light text-sm md:text-lg space-y-2`}>
                 <li className="marker:text-[#e08200]">Adobe Illustrator</li>
                 <li className="marker:text-[#2d9def]">Adobe Photoshop</li>
                 <li className="marker:text-[#2cbf2d]">CorelDraw</li>
@@ -43,7 +56,7 @@ const data_tab = [
                         alt="amikom"
                         width={300}
                         height={300}
-                        className="mt-2 mb-4 w-[100px] md:w-[200px] h-auto"
+                        className="mt-2 mb-4 w-[100px] md:w-[120px] h-auto"
                     />
                 </li>
             </ul>
@@ -63,8 +76,8 @@ const Tabs = () => {
     };
 
     return (
-        <div className="flex flex-col mt-8 p-6 bg-dark/60 backdrop-blur-sm shadow-md shadow-custom-color/10 rounded-lg md:min-h-[400px]">
-            <div className={`${pixel.className} flex flex-row justify-start gap-2 text-lg md:text-2xl`}>
+        <div className="flex flex-col mt-8 p-6 bg-dark/40 backdrop-blur-xs shadow-around rounded-lg h-[280px] md:min-h-[340px]">
+            <div className={`${pixel.className} flex flex-row justify-start gap-2 text-sm md:text-2xl`}>
                 <TabButton
                     selectTab={() => handleTabChange("programming")}
                     active={tab === "programming"}

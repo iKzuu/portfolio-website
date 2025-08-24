@@ -115,13 +115,11 @@ function PixelTransition({
         bg-[#f6f6f6]
         text-white
         rounded-[15px]
-        border-2
-        border-[#78AEFF]
+        shadow-around-more-range
         w-[400px]
         max-w-full
         relative
         overflow-hidden
-        shadow-lg
       `}
       style={style}
       onMouseEnter={!isTouchDevice ? handleMouseEnter : undefined}

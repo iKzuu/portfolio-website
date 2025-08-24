@@ -7,8 +7,9 @@ module.exports = {
     ],
     theme: {
         extend: {
-            boxShadow: {
-                around: "0 0 10px #78AEFF",
+            backgroundImage: {
+                "pattern": "url('https://i0.wp.com/www.thewargamespot.com/wp-content/uploads/2017/03/dark-pattern-backgrounds-wallpaper-2.jpg?fit=1600%2C1000&ssl=1')",
+                "about-pattern": "url('')",
             }
         },
     },
