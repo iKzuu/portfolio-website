@@ -24,8 +24,8 @@ const data_tab = [
                         <Image src="images/icon/cpp.svg" width={60} height={60} alt="cpp" className="w-10 md:w-[60px] h-auto"/>
                     </div>
                     <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
-                        <Image src="images/icon/tailwind-css.svg" width={60} height={60} alt="javascript" className="w-10 md:w-[60px] h-auto"/>
-                        <Image src="images/icon/node-js.svg" width={60} height={60} alt="python" className="w-10 md:w-[60px] h-auto"/>
+                        <Image src="images/icon/tailwind-css.svg" width={60} height={60} alt="tailwindcss" className="w-10 md:w-[60px] h-auto"/>
+                        <Image src="images/icon/node-js.svg" width={60} height={60} alt="nodejs" className="w-10 md:w-[60px] h-auto"/>
                     </div>
                 </div>
             </div>
@@ -35,12 +35,24 @@ const data_tab = [
         title: "Design",
         id: "design",
         content: (
-            <ul className={`${poppins.className} list-disc list-inside pl-2 text-light text-sm md:text-lg space-y-2`}>
-                <li className="marker:text-[#e08200]">Adobe Illustrator</li>
-                <li className="marker:text-[#2d9def]">Adobe Photoshop</li>
-                <li className="marker:text-[#2cbf2d]">CorelDraw</li>
-                <li className="marker:text-[#E4004B]">Figma</li>
-            </ul>
+            <div className="flex flex-row md:space-x-10 justify-between md:justify-normal">
+                <ul className={`${poppins.className} list-disc list-inside pl-2 text-light text-sm md:text-lg space-y-2`}>
+                    <li className="marker:text-[#e08200]">Adobe Illustrator</li>
+                    <li className="marker:text-[#2d9def]">Adobe Photoshop</li>
+                    <li className="marker:text-[#2cbf2d]">CorelDraw</li>
+                    <li className="marker:text-[#E4004B]">Figma</li>
+                </ul>
+                <div className="flex flex-col space-y-4 space-x-4">
+                    <div className="flex flex-row items-center gap-2 md:gap-4">
+                        <Image src="images/icon/adobe-illustrator.svg" width={60} height={60} alt="adobe-illustrator" className="w-10 md:w-[60px] h-auto"/>
+                        <Image src="images/icon/adobe-photoshop.svg" width={60} height={60} alt="adobe-photoshop" className="w-10 md:w-[60px] h-auto"/>
+                    </div>
+                    <div className="flex flex-row items-center gap-2 md:gap-4">
+                        <Image src="images/icon/corel-draw.svg" width={60} height={60} alt="corel-draw" className="w-10 md:w-[60px] h-auto"/>
+                        <Image src="images/icon/figma.svg" width={60} height={60} alt="figma" className="w-10 md:w-[60px] h-auto"/>
+                    </div>     
+                </div>
+            </div>
         ),
     },
     {
@@ -53,7 +65,7 @@ const data_tab = [
                     <span className="block text-xs md:text-sm text-semi-light text-wrap">Bachelor's Degree in Informatics (2024 - Present)</span>
                     <Image 
                         src="https://www.amikomsolo.ac.id/wp-content/uploads/2020/01/logo-amikom-surakarta-1-300x300.png"
-                        alt="amikom"
+                        alt="amikom-logo"
                         width={300}
                         height={300}
                         className="mt-2 mb-4 w-[100px] md:w-[120px] h-auto"

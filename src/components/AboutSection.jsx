@@ -5,7 +5,7 @@ import Tabs from "./Utils/Tabs";
 
 const AboutSection = () => {
     return (
-        <section className="relative w-full min-h-screen overflow-hidden">
+        <section className="relative w-full overflow-hidden">
             {/* background */}
             <div className="absolute inset-0 z-0 w-full h-full">
                 <Particles 
@@ -21,7 +21,7 @@ const AboutSection = () => {
             </div>
 
             {/* content */}
-            <div className="z-10 grid grid-cols-1 sm:grid-cols-1 md:relative px-10">
+            <div className="z-10 grid grid-cols-1 sm:grid-cols-1 md:relative px-10 py-10 md:py-0">
                 <div className="hidden lg:block m-0 p-0">
                     <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
                 </div>

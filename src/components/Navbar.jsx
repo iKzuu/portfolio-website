@@ -10,12 +10,13 @@ const Navbar = () => {
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-dark/60 backdrop-blur-sm shadow-md shadow-custom-color/10">
             <div className={`flex flex-wrap items-center justify-between mx-auto py-5 px-10`}>
-                <Link href={'/'} className="bg-white rounded-4xl">
+                <Link href={'/'} className="bg-white rounded-md shadow-around">
                     <Image
                         src="/images/ikzuu.png"
                         alt="ikzuu"
-                        width={55}
-                        height={55}
+                        width={56}
+                        height={56}
+                        className="w-[36px] md:w-[56px] h-auto"
                     />
                 </Link>
                 <NavMenu navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />

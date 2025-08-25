@@ -1,3 +1,4 @@
+import LoopingLogo from "@/components/Utils/LoopingLogo";
 import AboutSection from "../components/AboutSection";
 import HeroSection from "../components/HeroSection";
 import Navbar from "../components/Navbar";
@@ -17,6 +18,7 @@ export default function Home() {
       <div className="lg:px-0 lg:py-0">
         <AboutSection />
       </div>
+      <LoopingLogo />
       <div>
         <ProjectSection />
       </div>

@@ -3,7 +3,7 @@ import { pixel } from "@/app/ui/font";
 const ProjectSection = () => {
     return (
         <section>
-            <div className="py-10 flex flex-row justify-between">
+            <div className="flex flex-row justify-between">
                 <div className="flex-1">
                     <h1 className={`${pixel.className} text-center lg:text-start text-4xl lg:text-6xl font-extrabold`}>
                         My Projects
