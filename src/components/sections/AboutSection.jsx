@@ -1,7 +1,7 @@
-import { pixel, poppins } from "../app/ui/font";
-import Lanyard from "./Lanyard/Lanyard";
-import Particles from "./Particles/Particles";
-import Tabs from "./Utils/Tabs";
+import { pixel, poppins } from "../../lib/font";
+import Lanyard from "../animations/Lanyard/Lanyard";
+import Particles from "../animations/Particles/Particles";
+import Tabs from "../ui/Tabs";
 
 const AboutSection = () => {
     return (

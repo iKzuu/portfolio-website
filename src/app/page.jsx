@@ -1,9 +1,9 @@
-import LoopingLogo from "@/components/Utils/LoopingLogo";
-import AboutSection from "../components/AboutSection";
-import HeroSection from "../components/HeroSection";
-import Navbar from "../components/Navbar";
-import ProjectSection from "../components/ProjectSection";
-import ScrollVelo from "../components/Utils/ScrollVelo";
+import LoopingLogo from "@/components/ui/LoopingLogo";
+import AboutSection from "../components/sections/AboutSection";
+import HeroSection from "../components/sections/HeroSection";
+import Navbar from "../components/layout/Navbar";
+import ProjectSection from "../components/sections/ProjectSection";
+import ScrollVelo from "../components/ui/ScrollVelo";
 
 export default function Home() {
   return (

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { pixel } from "../../app/ui/font";
+import { pixel } from "../../lib/font";
 
 const NavLink = ({ href, title }) => {
     return (

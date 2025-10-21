@@ -1,6 +1,6 @@
 "use client"
 import TabButton from "./TabButton";
-import { pixel, poppins } from "@/app/ui/font";
+import { pixel, poppins } from "@/lib/font";
 import { useState, useTransition } from "react";
 import Image from "next/image";
 

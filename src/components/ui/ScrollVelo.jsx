@@ -1,5 +1,5 @@
-import ScrollVelocity from "../ScrollVelocity/ScrollVelocity";
-import { pixel } from "@/app/ui/font";
+import ScrollVelocity from "../animations/ScrollVelocity/ScrollVelocity";
+import { pixel } from "@/lib/font";
 
 const ScrollVelo = () => {
     return (

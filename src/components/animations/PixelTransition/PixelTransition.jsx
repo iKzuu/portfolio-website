@@ -1,8 +1,8 @@
 'use client'
 import { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
-import { useClientOnly } from '@/app/hooks/useClientOnly';
-import { pixel } from '@/app/ui/font';
+import { useClientOnly } from '@/hooks/useClientOnly';
+import { pixel } from '@/lib/font';
 
 function PixelTransition({
   firstContent,

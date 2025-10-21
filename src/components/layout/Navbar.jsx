@@ -1,9 +1,9 @@
 "use client"
 import Image from "next/image";
 import Link from "next/link";
-import { NavMenu, navLinks } from "./Utils/NavMenu";
 import { useState } from "react";
 import MenuOverlay from "./MenuOverlay";
+import { navLinks, NavMenu } from "./NavMenu";
 
 const Navbar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);

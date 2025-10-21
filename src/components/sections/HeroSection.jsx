@@ -1,9 +1,9 @@
 import React from "react";
-import { pixel, poppins } from "../app/ui/font";
+import { pixel, poppins } from "../../lib/font";
 import Image from "next/image";
-import LinkButton from "./Utils/LinkButton";
-import PixelImage from "./Utils/PixelImage";
-import TypeTextAnimation from "./TypeAnimation/TypeTextAnimation";
+import LinkButton from "../ui/LinkButton";
+import PixelImage from "../ui/PixelImage";
+import TypeTextAnimation from "../animations/TypeAnimation/TypeTextAnimation";
 
 const HeroSection = () => {
     return (

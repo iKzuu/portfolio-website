@@ -1,4 +1,4 @@
-import PixelTransition from "../PixelTransition/PixelTransition";
+import PixelTransition from "../animations/PixelTransition/PixelTransition";
 
 const PixelImage = () => {
     return (

@@ -1,5 +1,5 @@
 "use client";
-import NavLink from "./NavLink";
+import NavLink from "../ui/NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid"
 
 const navLinks = [

@@ -1,4 +1,4 @@
-import { pixel } from "@/app/ui/font";
+import { pixel } from "@/lib/font";
 
 const Button = ({textbtn}) => {
     return (
