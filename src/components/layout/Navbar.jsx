@@ -8,8 +8,8 @@ import { navLinks, NavMenu } from "./NavMenu";
 const Navbar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-dark/60 backdrop-blur-sm shadow-md shadow-custom-color/10">
-            <div className={`flex flex-wrap items-center justify-between mx-auto py-5 px-10`}>
+        <nav className="fixed top-4 left-4 right-4 z-50 bg-dark/60 backdrop-blur-sm shadow-[0_0_20px_0px] shadow-custom-color/10 rounded-2xl">
+            <div className={`flex flex-wrap items-center justify-between mx-auto py-5 px-6`}>
                 <Link href={'/'} className="bg-white rounded-md shadow-around">
                     <Image
                         src="/images/ikzuu.png"

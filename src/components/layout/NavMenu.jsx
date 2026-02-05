@@ -5,7 +5,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid"
 const navLinks = [
     {
         title: "Home",
-        href: "/"
+        href: "#hero"
     },
     {
         title: "About",
@@ -13,7 +13,7 @@ const navLinks = [
     },
     {
         title: "Projects",
-        href: "#project"
+        href: "#projects"
     }
 ];
 
