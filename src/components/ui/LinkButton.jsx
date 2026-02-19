@@ -22,9 +22,9 @@ const LinkButton = () => {
     ];
 
     return (
-        <div className="flex flex-row items-center md:items-baseline md:flex-col gap-5">
-            <ContainerSocial links={socialMediaData} />
-            <Button textbtn={"Resume"} />
+        <div className="relative z-20 flex flex-col justify-center items-center md:items-baseline gap-5 lg:bg-dark/40 lg:backdrop-blur-xs lg:rounded-sm lg:p-4">
+            <ContainerSocial links={socialMediaData} gap="gap-4"/>
+            <Button textbtn={"Download CV"} />
         </div>
     );
 };

@@ -10,15 +10,9 @@ export default function Home() {
     <main className="flex min-h-screen flex-col bg-dark">
       <Navbar />
       {/* Hero */}
-      <div id="hero" className="scroll-mt-32 mt-32 my-10 md:scroll-mt-40 md:mt-40 md:my-20 lg:scroll-mt-40 lg:mt-44 lg:my-20 px-12 py-4">
+      <div id="hero" className="scroll-mt-32 mt-32 my-10 px-12 py-4 md:scroll-mt-40 md:mt-40 md:my-20 lg:scroll-mt-0 lg:mt-0 lg:my-0 lg:p-0">
         <HeroSection />
       </div>
-      <ScrollVelo />
-      {/* About */}
-      <div id="about" className="lg:px-0 lg:py-0">
-        <AboutSection />
-      </div>
-      <LoopingLogo />
       <div id="projects">
         <ProjectSection />
       </div>
