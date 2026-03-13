@@ -7,7 +7,8 @@ const nextConfig = {
                 hostname: 'www.amikomsolo.ac.id'
             }
         ]
-    }
+    },
+    allowedDevOrigins: ['local-origin.dev', '*.local-origin.dev'],
 };
 
 export default nextConfig;
