@@ -1,39 +1,50 @@
 import React from "react";
-import { pixel, poppins } from "../../lib/font";
-import Image from "next/image";
-import LinkButton from "../ui/LinkButton";
+import { jetbrains, pixel, poppins } from "../../lib/font";
 import Lanyard from "../animations/Lanyard/Lanyard";
 import PixelImage from "../ui/PixelImage";
 import TypeTextAnimation from "../animations/TypeAnimation/TypeTextAnimation";
+import Socials from "../ui/Socials";
+import Lightbar from "../ui/LightBar";
+import Chip from "../ui/Chip";
+import { SiGithub, SiInstagram } from "react-icons/si";
 
 const HeroSection = () => {
     return (
-        <section className="lg:relative lg:min-h-screen lg:overflow-hidden">
-            <div className="flex flex-col items-center sm:flex-row sm:justify-between md:flex-row md:justify-between">
+        <section className="relative w-full md:min-h-screen">
+            <Lightbar />
 
-                <div className="flex flex-col space-y-6 text-left text-light md:text-left lg:text-left lg:absolute lg:bottom-40 lg:left-44 2xl:left-56 2xl:bottom-44">
-                    <h1 className={`${pixel.className} mb-4 text-2xl md:text-3xl lg:text-4xl 2xl:text-6xl font-extrabold`}>Hello, I'm <TypeTextAnimation /></h1>
-                    <h3 className={`${poppins.className} text-md lg:text-xl 2xl:text-2xl mb-6`}>Frontend Developer & <br className="hidden sm:block lg:hidden"/> Graphic Designer</h3>
-                    <div className="hidden sm:block md:block lg:block w-fit">
-                        <LinkButton />
-                    </div>
-                    <p className="text-justify hidden sm:block sm:text-xs sm:w-[56%] md:block md:w-[64%] md:text-xs lg:text-md lg:w-[32%] 2xl:text-lg">Creating clean, modern interfaces focused on clarity and purpose, transforming ideas into simple, responsive, and <strong>user-friendly</strong> layouts.</p>
+            <div className="flex flex-col py-10 lg:py-14 space-y-10 items-center md:h-screen md:justify-between">
+
+                <div className={`${pixel.className} flex flex-row justify-between items-center w-full`}>
+                    <Chip text="Anang Setiaji"/>
+                    <Chip text="Surakarta, Indonesia"/>
                 </div>
 
                 {/* Lanyard large display*/}
-                <div className="hidden md:hidden lg:block absolute w-full inset-0 pointer-events-none top-0 right-0 left-0">
-                    <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} offset={[3, 4, 0]}/>
+                <div className="z-20 hidden lg:block absolute inset-0 pointer-events-none w-screen h-full top-0 right-0 left-1/2 -translate-x-1/2">
+                    <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} offset={[0, 4.5, 0]}/>
                 </div>
 
                 {/* mobile display */}
-                <div className="flex flex-col space-y-6 lg:hidden mt-4 lg:mt-0">
-                    <div className="w-[280px] h-[280px] sm:w-[300px] sm:h-[300px] md:w-[340px] md:h-[340px] place-self-center">
-                        <PixelImage />
+                <div className="w-[280px] h-[280px] sm:w-[300px] sm:h-[300px] md:w-[340px] md:h-[340px] block lg:hidden place-self-center">
+                    <PixelImage />
+                </div>
+
+                <h1 className={`${jetbrains.className} hidden lg:block text-9xl text-center`}>Frontend <br /> Developer</h1>
+
+                <div className="flex flex-col gap-8 items-center w-full">
+                    <div className="z-10 flex lg:hidden flex-col p-2 md:p-4 w-full lg:max-w-[60%] justify-center md:justify-start bg-accent inset-shadow-black-hard border-2 border-accent">
+                        <h1 className={`${pixel.className} text-2xl md:text-4xl font-semibold`}><TypeTextAnimation /></h1>
                     </div>
-                    <p className="w-full text-justify text-xs block sm:hidden md:hidden">Creating clean, modern interfaces focused on clarity and purpose, transforming ideas into simple, responsive, and <strong>user-friendly</strong> layouts.</p>
-                    <div className="block sm:hidden md:hidden place-self-start lg:hidden">
-                        <LinkButton />
+
+                    <div className="flex flex-col md:flex-row md:justify-between items-center md:items-stretch p-4 md:p-0 gap-6 md:gap-12 lg:gap-0 w-full rounded-sm bg-dark/60 backdrop-blur-sm shadow-accent-soft md:bg-transparent md:backdrop-blur-none md:shadow-none">
+                        <p className={`${jetbrains.className} text-sm md:text-lg md:p-4 lg:max-w-2/5 2xl:max-w-1/4 leading-relaxed text-light md:bg-dark/60 md:backdrop-blur-sm md:shadow-accent-soft`}>Transforming creative ideas into modern, responsive layouts through strategic design and functional simplicity.</p>
+                        <div className="z-30 flex flex-row md:flex-col p-4 gap-6 itmes-center w-full md:w-fit md:bg-dark/60 md:backdrop-blur-sm md:shadow-accent-soft">
+                            <Socials href="https://www.instagram.com/ikzuu_?igsh=MXBsajI5a2dmYnBr" name="instagram" Icon={SiInstagram}/>
+                            <Socials href="https://github.com/iKzuu" name="github" Icon={SiGithub}/>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </section>
