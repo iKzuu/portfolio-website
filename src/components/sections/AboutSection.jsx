@@ -1,39 +1,46 @@
-import { pixel, poppins } from "../../lib/font";
-import Particles from "../animations/Particles/Particles";
-import Tabs from "../ui/Tabs";
+import { jetbrains} from "../../lib/font";
+import ResumeCard from "../ui/ResumeCard";
+import RetroHeading from "../ui/RetroHeading";
+import data from "@/data/resume.json";
 
 const AboutSection = () => {
     return (
-        <section className="relative w-full overflow-hidden">
-            {/* background */}
-            <div className="absolute inset-0 z-0 w-full h-full">
-                <Particles 
-                    particleColors={['#ffffff', '#ffffff']}
-                    particleCount={200}
-                    particleSpread={10}
-                    speed={0.1}
-                    particleBaseSize={100}
-                    moveParticlesOnHover={false}
-                    alphaParticles={false}
-                    disableRotation={false}
-                />
-            </div>
+        <section>
+            <div className="flex flex-col py-8 gap-8">
+                <div className="z-10 flex flex-col gap-4">
+                    <RetroHeading text="About Me"/>
 
-            {/* content */}
-            <div className="z-10 grid grid-cols-1 sm:grid-cols-1 md:relative px-10 py-10 md:px-12 md:py-20 lg:pt-0 lg:pb-10 2xl:py-0">
-                <div className="w-auto lg:pl-10 lg:max-w-2xl lg:absolute lg:right-20 2xl:absolute 2xl:right-52">
-                    <div className="space-y-5 lg:space-y-10 text-light">
-                        <h1 className={`${pixel.className} text-center lg:text-start text-4xl lg:text-6xl font-extrabold`}>
-                            About Me
-                            <span className="text-custom-color text-6xl lg:text-9xl">.</span>
-                        </h1>
-                        <div className="bg-dark/40 backdrop-blur-xs p-6 rounded-lg shadow-around">
-                            <p className={`${poppins.className} text-justify text-sm lg:text-2xl`}>
-                                I’m passionate about building interfaces that are simple, modern, and easy to use. I believe good design isn’t about complexity, it’s about clarity and purpose. I enjoy turning ideas into clean, responsive layouts that users love.
-                            </p>
-                        </div>
+                    <p className={`${jetbrains.className} text-sm lg:text-lg text-justify p-6 rounded-sm bg-dark/60 backdrop-blur-xs shadow-accent-soft lg:max-w-[80%] 2xl:max-w-1/2`}>I’m passionate about building interfaces that are simple, modern, and easy to use. I believe good design isn’t about complexity, it’s about clarity and purpose. I enjoy turning ideas into clean, responsive layouts that users love.</p>
+                </div>
+
+                <div className="z-10 flex flex-col items-end gap-4">
+                    <RetroHeading text="Work Experience"/>
+                    <div className="flex flex-col gap-4 sm:w-full lg:max-w-[80%] 2xl:max-w-1/2">
+                        {data.workExperience.map((exp) => (
+                            <ResumeCard 
+                                key={exp.id}
+                                company={exp.company}
+                                role={exp.role}
+                                date={exp.date}
+                                description={exp.desc}
+                            />
+                        ))}
                     </div>
-                    {/* <Tabs /> */}
+                </div>
+
+                <div className="z-10 flex flex-col gap-4">
+                    <RetroHeading text="Education"/>
+                    <div className="flex flex-col gap-4 sm:w-full lg:max-w-[80%] 2xl:max-w-1/2">
+                        {data.education.map((edu) => (
+                            <ResumeCard 
+                                key={edu.id}
+                                company={edu.company}
+                                role={edu.role}
+                                date={edu.date}
+                                description={edu.desc}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
