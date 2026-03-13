@@ -7,7 +7,7 @@ const ProjectSection = () => {
                 <div className="flex-1">
                     <h1 className={`${pixel.className} text-center lg:text-start text-4xl lg:text-6xl font-extrabold`}>
                         My Projects
-                        <span className="text-custom-color text-6xl lg:text-9xl">.</span>
+                        <span className="text-accent text-6xl lg:text-9xl">.</span>
                     </h1>
                 </div>
                 <div className={`${pixel.className} flex flex-col items-center justify-center`}>

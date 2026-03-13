@@ -1,27 +1,47 @@
 "use client"
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import MenuOverlay from "./MenuOverlay";
-import { navLinks, NavMenu } from "./NavMenu";
+import { useEffect, useState } from "react";
+import NavLink from "../ui/NavLink";
+import { Computer, Home, Mail, User } from "lucide-react";
+
+const sections = [
+    "hero",
+    "projects",
+    "about",
+    "contact"
+];
 
 const Navbar = () => {
-    const [navbarOpen, setNavbarOpen] = useState(false);
+    const [active, setActive] = useState("hero");
+
+    useEffect(() => {
+        const observers = [];
+
+        sections.forEach((id) => {
+            const element = document.getElementById(id);
+            if (!element) return;
+
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.isIntersecting) {
+                        setActive(id);
+                    }
+                },
+                {threshold: 0.6}
+            );
+
+            observer.observe(element);
+            observers.push(observer);
+        });
+
+        return () => observers.forEach((observer) => observer.disconnect());
+    }, []);
+
     return (
-        <nav className="fixed top-4 left-4 right-4 z-50 bg-dark/60 backdrop-blur-sm shadow-[0_0_20px_0px] shadow-custom-color/10 rounded-2xl">
-            <div className={`flex flex-wrap items-center justify-between mx-auto py-5 px-6`}>
-                <Link href={'/'} className="bg-white rounded-md shadow-around">
-                    <Image
-                        src="/images/ikzuu.png"
-                        alt="ikzuu"
-                        width={56}
-                        height={56}
-                        className="w-[36px] md:w-[56px] h-auto"
-                    />
-                </Link>
-                <NavMenu navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
-            </div>
-            {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
+        <nav className="flex flex-row items-center w-auto h-20 rounded-[4px] overflow-hidden bg-dark shadow-black-soft">
+            <NavLink href="#hero" title="Home" Icon={Home} active={active === "hero"}/>
+            <NavLink href="#about" title="About" Icon={User} active={active === "about"}/>
+            <NavLink href="#project" title="Projects" Icon={Computer} active={active === "projects"}/>
+            <NavLink href="#contact" title="Contact" Icon={Mail} active={active === "contact"}/>
         </nav>
     );
 };

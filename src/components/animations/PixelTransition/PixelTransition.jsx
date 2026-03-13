@@ -115,7 +115,7 @@ function PixelTransition({
         bg-[#f6f6f6]
         text-white
         rounded-[15px]
-        shadow-around-more-range
+        shadow-around
         w-[400px]
         max-w-full
         relative

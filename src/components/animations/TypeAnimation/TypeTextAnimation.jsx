@@ -5,13 +5,9 @@ const TypeTextAnimation = () => {
   return (
     <TypeAnimation
       sequence={[
-        'Anang',
+        'Frontend Developer',
         1500,
-        'Setiaji',
-        1500,
-        'Frontend',
-        1500,
-        'Designer',
+        'Graphic Designer',
         1500
       ]}
       wrapper="span"
