@@ -1,22 +1,19 @@
 import { pixel } from "@/lib/font";
 
-const items = ["Design", "Develop", "Design", "Develop", "Design", "Develop"];
+const items = ["Design", "Develop"];
 
 const Marquee = () => {
 
-    const sets = [1,2,3,4];
+    const repeatCount = Math.ceil(20 / items.length);
+    const loopItems = Array(repeatCount).fill(items).flat();
 
     return (
         <div className="relative flex overflow-hidden bg-dark border-y-2 border-neutral py-4 -rotate-2">
             <div className="flex animate-marquee whitespace-nowrap">
-                {sets.map((set) => (
-                    <div key={set} className="flex">
-                        {items.map((item, index) => (
-                            <span key={`${set}-${index}`} className={`${pixel.className} text-2xl text-light mx-10`}>
-                                {item}
-                            </span>
-                        ))}
-                    </div>
+                {loopItems.map((item, index) => (
+                    <span key={index} className={`${pixel.className} text-2xl text-light mx-10`}>
+                        {item}
+                    </span>
                 ))}
             </div>
 
