@@ -6,7 +6,7 @@ import Marquee from "@/components/animations/Marquee/Marquee";
 
 export default function Home() {
 
-  const sectionPadding = "px-8 md:px-24 lg:px-40 2xl:px-64";
+  const sectionPadding = "px-4 md:px-24 lg:px-40 2xl:px-64";
 
   // px-8 md:px-24 lg:px-28
 
