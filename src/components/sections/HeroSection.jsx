@@ -10,10 +10,10 @@ import { SiGithub, SiInstagram } from "react-icons/si";
 
 const HeroSection = () => {
     return (
-        <section className="relative w-full md:min-h-screen">
+        <section className="relative w-full lg:min-h-screen">
             <Lightbar />
 
-            <div className="flex flex-col py-10 lg:py-14 space-y-10 items-center md:h-screen md:justify-between">
+            <div className="flex flex-col py-10 lg:py-14 space-y-10 md:space-y-16 items-center lg:h-screen lg:justify-between">
 
                 <div className={`${pixel.className} flex flex-row justify-between items-center w-full`}>
                     <Chip text="Anang Setiaji"/>
@@ -38,8 +38,8 @@ const HeroSection = () => {
                     </div>
 
                     <div className="flex flex-col md:flex-row md:justify-between items-center md:items-stretch p-4 md:p-0 gap-6 md:gap-12 lg:gap-0 w-full rounded-sm bg-dark/60 backdrop-blur-sm shadow-accent-soft md:bg-transparent md:backdrop-blur-none md:shadow-none">
-                        <p className={`${jetbrains.className} text-sm md:text-lg md:p-4 lg:max-w-2/5 2xl:max-w-1/4 leading-relaxed text-light md:bg-dark/60 md:backdrop-blur-sm md:shadow-accent-soft`}>Transforming creative ideas into modern, responsive layouts through strategic design and functional simplicity.</p>
-                        <div className="z-30 flex flex-row md:flex-col p-4 gap-6 itmes-center w-full md:w-fit md:bg-dark/60 md:backdrop-blur-sm md:shadow-accent-soft">
+                        <p className={`${jetbrains.className} text-sm text-justify md:text-left md:text-lg md:p-4 lg:max-w-2/5 2xl:max-w-1/4 leading-relaxed text-light md:bg-dark/60 md:backdrop-blur-sm md:shadow-accent-soft`}>Transforming creative ideas into modern, responsive layouts through strategic design and functional simplicity.</p>
+                        <div className="z-30 flex flex-row md:flex-col p-4 gap-6 w-full md:w-fit md:bg-dark/60 md:backdrop-blur-sm md:shadow-accent-soft">
                             <Socials href="https://www.instagram.com/ikzuu_?igsh=MXBsajI5a2dmYnBr" name="instagram" Icon={SiInstagram}/>
                             <Socials href="https://github.com/iKzuu" name="github" Icon={SiGithub}/>
                         </div>
