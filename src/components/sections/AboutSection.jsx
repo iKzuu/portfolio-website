@@ -11,12 +11,12 @@ const AboutSection = () => {
                 <div className="z-10 flex flex-col gap-4">
                     <RetroHeading text="About Me"/>
 
-                    <p className={`${jetbrains.className} text-sm lg:text-lg text-justify p-6 rounded-sm bg-dark/60 backdrop-blur-xs shadow-accent-soft lg:max-w-[80%] 2xl:max-w-1/2`}>Frontend Developer with experience in JavaScript, Next.js, and Flutter, focused on building responsive, modern, and user-friendly web and mobile applications.</p>
+                    <p className={`${jetbrains.className} text-sm lg:w-[60ch] lg:text-lg p-6 bg-dark/60 backdrop-blur-xs shadow-accent-soft`}>Frontend Developer with experience in JavaScript, Next.js, and Flutter, focused on building responsive, modern, and user-friendly web and mobile applications.</p>
                 </div>
 
                 <div className="z-10 flex flex-col items-end gap-4">
                     <RetroHeading text="Work Experience"/>
-                    <div className="flex flex-col p-2 md:p-4 gap-4 w-full lg:max-w-[80%] 2xl:max-w-1/2 backdrop-blur-sm shadow-accent-soft">
+                    <div className="flex flex-col p-2 md:p-4 gap-4 w-full lg:w-[60ch] backdrop-blur-sm shadow-accent-soft">
                         {data.workExperience.map((exp, index) => (
                             <React.Fragment key={exp.id}>
                                 <ResumeCard 
@@ -39,7 +39,7 @@ const AboutSection = () => {
 
                 <div className="z-10 flex flex-col gap-4">
                     <RetroHeading text="Education"/>
-                    <div className="flex flex-col p-2 md:p-4 gap-4 w-full lg:max-w-[80%] 2xl:max-w-1/2 backdrop-blur-sm shadow-accent-soft">
+                    <div className="flex flex-col p-2 md:p-4 gap-4 w-full lg:w-[60ch] backdrop-blur-sm shadow-accent-soft">
                         {data.education.map((edu) => (
                             <ResumeCard 
                                 key={edu.id}

@@ -19,9 +19,9 @@ const ResumeCard = ({company, role, date, description, arrangement, type, locati
                     ))}
                 </div>
             </div>
-            <h4 className={`${jetbrains.className} text-sm text-semilight lg:text-lg font-semibold break-words`}>{info.join(" • ")}</h4>
+            <h4 className={`${jetbrains.className} text-xs md:text-sm text-semilight lg:text-lg font-semibold wrap-break-words`}>{info.join(" • ")}</h4>
             <h4 className={`${jetbrains.className} text-xs lg:text-lg font-semibold`}>{date}</h4>
-            <p className={`${poppins.className} text-xs lg:text-base text-justify font-normal`}>{description}</p>
+            <p className={`${poppins.className} text-xs lg:text-base font-normal`}>{description}</p>
         </div>
     );
 }

@@ -7,7 +7,7 @@ const Socials = ({href, Icon, size = 28, name}) => {
             <div className="bg-light p-2 border-2 border-black rounded-sm shadow-accent-hard text-dark">
                 <Icon size={size}/>
             </div>
-            <h4 className={`${pixel.className} font-semibold text-base md:text-xl`}>{name}</h4>
+            <h4 className={`${pixel.className} font-semibold text-sm md:text-base lg:text-lg 2xl:text-xl`}>{name}</h4>
         </Link>
     );
 }

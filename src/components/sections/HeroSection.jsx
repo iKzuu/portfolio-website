@@ -26,7 +26,7 @@ const HeroSection = () => {
                 </div>
 
                 {/* mobile display */}
-                <div className="w-[280px] h-[280px] sm:w-[300px] sm:h-[300px] md:w-[340px] md:h-[340px] block lg:hidden place-self-center">
+                <div className="w-70 h-70 sm:w-75 sm:h-75 md:w-85 md:h-85 block lg:hidden place-self-center">
                     <PixelImage />
                 </div>
 
@@ -37,9 +37,9 @@ const HeroSection = () => {
                         <h1 className={`${pixel.className} text-2xl md:text-4xl font-semibold`}><TypeTextAnimation /></h1>
                     </div>
 
-                    <div className="flex flex-col md:flex-row md:justify-between items-center md:items-stretch p-4 md:p-0 gap-6 md:gap-12 lg:gap-0 w-full rounded-sm bg-dark/60 backdrop-blur-sm shadow-accent-soft md:bg-transparent md:backdrop-blur-none md:shadow-none">
-                        <p className={`${jetbrains.className} text-sm text-justify md:text-left md:text-lg md:p-4 lg:max-w-2/5 2xl:max-w-1/4 leading-relaxed text-light md:bg-dark/60 md:backdrop-blur-sm md:shadow-accent-soft`}>Transforming creative ideas into modern, responsive layouts through strategic design and functional simplicity.</p>
-                        <div className="z-30 flex flex-row md:flex-col p-4 gap-6 w-full md:w-fit md:bg-dark/60 md:backdrop-blur-sm md:shadow-accent-soft">
+                    <div className="flex flex-col sm:flex-row sm:justify-between items-start sm:items-stretch p-4 md:p-0 gap-6 md:gap-12 lg:gap-0 w-full rounded-sm bg-dark/60 backdrop-blur-sm shadow-accent-soft sm:bg-transparent sm:backdrop-blur-none sm:shadow-none">
+                        <p className={`${jetbrains.className} text-sm sm:text-base md:text-lg sm:p-4 md:w-[50ch] lg:w-[45ch] xl:w-[40ch] leading-relaxed text-light sm:bg-dark/60 sm:backdrop-blur-sm sm:shadow-accent-soft`}>Transforming creative ideas into modern, responsive layouts through strategic design and functional simplicity.</p>
+                        <div className="z-30 flex flex-row sm:flex-col sm:p-4 gap-6 w-full md:w-fit sm:bg-dark/60 sm:backdrop-blur-sm sm:shadow-accent-soft">
                             <Socials href="https://www.instagram.com/ikzuu_?igsh=MXBsajI5a2dmYnBr" name="instagram" Icon={SiInstagram}/>
                             <Socials href="https://github.com/iKzuu" name="github" Icon={SiGithub}/>
                         </div>
