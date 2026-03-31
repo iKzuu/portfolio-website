@@ -1,14 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        remotePatterns: [
-            {
-                protocol: 'https',
-                hostname: 'www.amikomsolo.ac.id'
-            }
-        ]
-    },
-    allowedDevOrigins: ['local-origin.dev', '*.local-origin.dev'],
+  allowedDevOrigins: [
+    "192.168.1.2",
+    "192.168.1.8",
+    "192.168.1.9",
+  ],
 };
 
 export default nextConfig;

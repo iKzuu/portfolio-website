@@ -7,10 +7,12 @@
   --color-black: #000000;
   --color-accent: #74aeff;
   --color-neutral: #323232;
+  --color-semilight: #adadad;
 
   --shadow-accent-soft: 2px 2px 4px 0px #74aeff;
   --shadow-black-soft: 4px 4px 4px 0px #000000;
   --shadow-accent-hard: 4px 4px 0px 0px #74aeff;
+  --shadow-accent-sm-hard: 2px 2px 0px 0px #74aeff;
   --shadow-around: 0px 0px 10px 2px #74aeff;
   --inset-shadow-black-hard: inset 1px 2px 0px 4px #000000;
 

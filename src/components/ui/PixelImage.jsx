@@ -5,19 +5,25 @@ const PixelImage = () => {
         <PixelTransition
             firstContent={
                 <img
-                    src="/images/front_image.png"
+                    src="/images/me-kazuma.svg"
                     alt="ikzuu"
                     style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
             }
             secondContent={
-                <img
-                    src="/images/back-image.png"
-                    alt="github"
-                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
+                <div
+                    className="
+                        grid
+                        w-full
+                        h-full
+                        place-items-center
+                        bg-light
+                    "
+                >
+                    <p className="text-6xl text-accent font-bold">Hi!</p>
+                </div>
             }
-            gridSize={16}
+            gridSize={8}
             pixelColor='#78AEFF'
             animationStepDuration={0.4}
             className="custom-pixel-card"
