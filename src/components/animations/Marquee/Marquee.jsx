@@ -1,17 +1,20 @@
 import { pixel } from "@/lib/font";
+import { useMemo } from "react";
 
-const items = ["Design", "Develop"];
+const items = ["Frontend", "Developer"];
 
 const Marquee = () => {
 
-    const repeatCount = Math.ceil(20 / items.length);
-    const loopItems = Array(repeatCount).fill(items).flat();
+    const loopItems = useMemo(() => {
+        const repeatCount = Math.ceil(20 / items.length);
+        return Array(repeatCount).fill(items).flat();
+    }, []);
 
     return (
         <div className="relative flex overflow-hidden bg-dark border-y-2 border-neutral py-4 -rotate-2">
             <div className="flex animate-marquee whitespace-nowrap">
                 {loopItems.map((item, index) => (
-                    <span key={index} className={`${pixel.className} text-2xl text-light mx-10`}>
+                    <span key={index} className={`${pixel.className} text-2xl 2xl:text-4xl text-light mx-10`}>
                         {item}
                     </span>
                 ))}
