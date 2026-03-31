@@ -14,14 +14,35 @@ import * as THREE from 'three';
 
 extend({ MeshLineGeometry, MeshLineMaterial });
 
-export default function Lanyard({ position = [0, 0, 30], gravity = [0, -40, 0], fov = 20, transparent = true, offset = DEFAULT_OFFSET }) {
+export default function Lanyard({ position = [0, 0, 30], fov = 20, transparent = true, offset = DEFAULT_OFFSET }) {
   const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' && window.innerWidth < 768);
+
+  const [dynamicGravity, setDynamicGravity] = useState([0, -40, 0]);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
+
+    const handleOrientation = (event) => {
+      if (!isMobile) return;
+
+      const { beta, gamma } = event;
+      
+      const newGravityX = gamma ? gamma * 1.5 : 0;
+      const newGravityY = beta ? -Math.abs(beta * 0.5) - 30 : 40;
+
+      setDynamicGravity([newGravityX, newGravityY, 0]);
+    };
+
+    if (typeof window != 'undefined' && window.DeviceOrientationEvent) {
+      window.addEventListener('deviceorientation', handleOrientation);
+    }
+
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+    return () => {
+      window.removeEventListener('resize', handleResize)
+      window.removeEventListener('deviceorientation', handleOrientation);
+    };
+  }, [isMobile]);
 
   return (
     <div className="relative z-0 w-full h-screen flex justify-center items-center transform scale-100 origin-center">
@@ -32,7 +53,7 @@ export default function Lanyard({ position = [0, 0, 30], gravity = [0, -40, 0], 
         onCreated={({ gl }) => gl.setClearColor(new THREE.Color(0x000000), transparent ? 0 : 1)}
       >
         <ambientLight intensity={Math.PI} />
-        <Physics key={isMobile ? 'm' : 'd'} gravity={gravity} timeStep={isMobile ? 1 / 30 : 1 / 60}>
+        <Physics key={isMobile ? 'm' : 'd'} gravity={dynamicGravity} timeStep={isMobile ? 1 / 30 : 1 / 60}>
           <Band isMobile={isMobile} offset={offset}/>
         </Physics>
         <Environment blur={0.75}>
@@ -187,7 +208,7 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false, offset = DEFAULT_
         <meshLineMaterial
           color="white"
           depthTest={false}
-          resolution={isMobile ? [2000, 3000] : [3000, 2000]}
+          resolution={typeof window !== 'undefined' ? [window.innerWidth, window.innerHeight] : [1920, 1080]}
           useMap
           map={texture}
           repeat={[-1, 1]}
