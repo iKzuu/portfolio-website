@@ -2,6 +2,14 @@ import Particles from "@/components/animations/Particles/Particles";
 import { poppins } from "../lib/font";
 import "./globals.css";
 
+export const metadata = {
+  title: "Anang Setiaji",
+  description: "Website Portfolio milik Anang Setiaji seorang Forntend Developer",
+  icons: {
+    icon: '/images/me-kazuma.svg'
+  }
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
