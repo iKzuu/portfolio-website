@@ -15,8 +15,8 @@ const HeroSection = () => {
             <div className="flex flex-col py-10 lg:py-14 space-y-10 md:space-y-16 items-center h-screen justify-between">
 
                 <div className={`${pixel.className} flex flex-row justify-between items-center w-full`}>
-                    <Chip text="Anang Setiaji"/>
-                    <Chip text="Surakarta, Indonesia"/>
+                    <Chip><h3 className="text-md md:text-xl">Anang Setiaji</h3></Chip>
+                    <Chip><h3 className="text-md md:text-xl">Surakarta, Indonesia</h3></Chip>
                 </div>
 
                 {/* Lanyard large display*/}
@@ -24,11 +24,12 @@ const HeroSection = () => {
                     <Lanyard position={[0, 0, 20]} offset={[0, 4.5, 0]}/>
                 </div>
 
+                {/* lanyard mobile phone display */}
                 <div className="block md:hidden absolute inset-0 pointer-events-none w-screen h-full top-0 right-0 left-1/2 -translate-x-1/2">
                     <Lanyard position={[0, 0, 20]} offset={[0, 5.3, 0]}/>
                 </div>
 
-                <h1 className={`${pixel.className} text-6xl md:text-9xl font-bold text-center`}>
+                <h1 className={`${pixel.className} text-6xl md:text-8xl xl:text-9xl font-bold text-center`}>
                     <PixelText clasName="text-accent">FRONTEND</PixelText>
                     <PixelText clasName="text-accent">DEVELOPER</PixelText>
                 </h1>
