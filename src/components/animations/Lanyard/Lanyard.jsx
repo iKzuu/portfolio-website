@@ -26,15 +26,18 @@ export default function Lanyard({ position = [0, 0, 30], fov = 20, transparent =
       if (!isMobile) return;
 
       const { beta, gamma } = event;
+      const clamp = (val, min, max) => Math.max(min, Math.min(max, val));
       
-      const newGravityX = gamma ? gamma * 1.5 : 0;
-      const newGravityY = beta ? -Math.abs(beta * 0.5) - 30 : 40;
+      const newGravityX = clamp(gamma * 1.5, -20, 20);
+      const newGravityY = clamp(-Math.abs(beta * 0.5) - 30, -50, -10);
 
       setDynamicGravity([newGravityX, newGravityY, 0]);
     };
 
-    if (typeof window != 'undefined' && window.DeviceOrientationEvent) {
+    if ( window.DeviceOrientationEvent ) {
       window.addEventListener('deviceorientation', handleOrientation);
+    } else {
+      setDynamicGravity([0, -40, 0]);
     }
 
     window.addEventListener('resize', handleResize);
