@@ -6,7 +6,7 @@ export const metadata = {
   title: "Anang Setiaji",
   description: "Website Portfolio milik Anang Setiaji seorang Forntend Developer",
   icons: {
-    icon: '/images/me-kazuma.svg'
+    icon: '/images/web-icon.svg'
   }
 }
 

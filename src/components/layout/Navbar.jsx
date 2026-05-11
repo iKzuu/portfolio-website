@@ -37,10 +37,10 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className="flex flex-row items-center w-auto h-20 rounded-[4px] overflow-hidden bg-dark shadow-black-soft">
+        <nav className="flex flex-row items-center w-auto h-20 rounded-sm overflow-hidden bg-dark shadow-black-soft">
             <NavLink href="#hero" title="Home" Icon={Home} active={active === "hero"}/>
             <NavLink href="#about" title="About" Icon={User} active={active === "about"}/>
-            <NavLink href="#project" title="Projects" Icon={Computer} active={active === "projects"}/>
+            <NavLink href="#projects" title="Projects" Icon={Computer} active={active === "projects"}/>
             <NavLink href="#contact" title="Contact" Icon={Mail} active={active === "contact"}/>
         </nav>
     );

@@ -5,7 +5,7 @@ const PixelImage = () => {
         <PixelTransition
             firstContent={
                 <img
-                    src="/images/me-kazuma.svg"
+                    src="/images/me-kazuma.png"
                     alt="ikzuu"
                     style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
