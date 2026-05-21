@@ -2,6 +2,8 @@ import { pixel } from "@/lib/font";
 import PixelText from "../ui/PixelText";
 import ProjectCard from "../ui/ProjectCard";
 import { projects } from "@/data/projects";
+import Link from "next/link";
+import { ArrowBigRight } from "lucide-react";
 
 const ProjectSection = () => {
     return (
@@ -18,7 +20,11 @@ const ProjectSection = () => {
                         tech={project.tech}
                     />
                 ))}
-            </div>            
+            </div>
+            <Link href="https://github.com/iKzuu" className="group flex flex-row gap-2 p-4 mt-4 md:mt-0 items-center bg-light w-fit">
+                <span className={`${pixel.className} text-dark text-lg md:text-xl lg:text-2xl font-semibold`}>See All Projects</span>
+                <ArrowBigRight color="#74aeff" className="group-hover:animate-arrow-move"/>
+            </Link>
         </section>
     );
 };
