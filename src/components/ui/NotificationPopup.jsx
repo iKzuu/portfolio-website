@@ -20,21 +20,21 @@ const NotificationPopup = ({
         flex items-center gap-3
         px-6 py-4
         border-4 border-black
-        shadow-accent-hard
+        shadow-black-hard
         animate-bounce
         transition-all duration-300
         ${
           type === "success"
-            ? "bg-accent text-dark"
-            : "bg-red-400 text-dark"
+            ? "bg-accent text-light"
+            : "bg-red-400 text-light"
         }
       `}
       >
         <div>
           {type === "success" ? (
-            <Check size={20} />
+            <Check size={20} color="white"/>
           ) : (
-            <X size={20} />
+            <X size={20} color="white"/>
           )}
         </div>
 
