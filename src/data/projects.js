@@ -4,8 +4,8 @@ export const projects = [
         image: "/images/web-icon.svg",
         name: "Zuunime",
         description: "Zuunime is an Android app for viewing information about anime or manga that uses the API from Jikan API.",
-        href: "https://github.com/iKzuu",
-        tech: ["Flutter", "Dart", "REST API"],
+        href: "https://github.com/iKzuu/zuunime-mobile.git",
+        tech: ["Flutter", "Dart", "Getx"],
     },
     
     {
@@ -13,7 +13,7 @@ export const projects = [
         image: "/images/web-icon.svg",
         name: "Sneakcommerce",
         description: "E-commerce sneaker app with cart, wishlist, and checkout features.",
-        href: "https://github.com/iKzuu",
-        tech: ["Flutter", "Hive", "Provider"],
+        href: "https://github.com/iKzuu/sneakcommerce",
+        tech: ["Flutter", "Dart", "Hive", "Provider"],
     },
 ]
