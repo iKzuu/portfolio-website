@@ -3,6 +3,7 @@ import Navbar from "../components/layout/Navbar";
 import ProjectSection from "@/components/sections/ProjectSection";
 import AboutSection from "@/components/sections/AboutSection";
 import Marquee from "@/components/animations/Marquee/Marquee";
+import ContactSection from "@/components/sections/ContactSection";
 
 export default function Home() {
 
@@ -23,6 +24,10 @@ export default function Home() {
       <Marquee />
       <div id="projects" className={`${sectionPadding} z-10`}>
         <ProjectSection />
+      </div>
+      <Marquee />
+      <div id="contact" className={`${sectionPadding} z-10`}>
+        <ContactSection />
       </div>
     </main>
   );
