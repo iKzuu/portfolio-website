@@ -1,10 +1,10 @@
 import React from "react";
 import { pixel} from "../../lib/font";
 import RetroHeading from "../ui/RetroHeading";
-import Button from "../ui/Button";
 import StatusBar from "../ui/StatusBar";
 import PixelImage from "../ui/PixelImage";
 import PixelText from "../ui/PixelText";
+import CvPreview from "../cv/CvPreview";
 
 const AboutSection = () => {
     return (
@@ -27,7 +27,7 @@ const AboutSection = () => {
                     </div>
 
                     <div className="hidden xl:flex flex-row justify-between items-end gap-4">
-                        <Button textbtn="Download CV"/>
+                        <CvPreview />
                         <div className="flex items-center gap-3 text-xs md:text-sm font-mono text-light/40">
                             <span className="inline-block w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                             Available for new projects
@@ -52,7 +52,7 @@ const AboutSection = () => {
 
 
                 <div className="w-full flex flex-col gap-4 xl:hidden order-4">
-                    <Button textbtn="Download CV"/>
+                    <CvPreview />
                 </div>
             </section>
         </section>

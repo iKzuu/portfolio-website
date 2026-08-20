@@ -2,8 +2,8 @@
 
 import { pixel } from "@/lib/font";
 import useContactForm from "@/hooks/useContactForm";
-import { Mail } from "lucide-react";
 import NotificationPopup from "./NotificationPopup";
+import { Send } from "pixelarticons/react";
 
 const ContactCard = () => {
   const {
@@ -105,7 +105,7 @@ const ContactCard = () => {
 
       <button
         disabled={loading}
-        className={`flex flex-row justify-center items-center gap-2 p-4 border-4 border-accent bg-dark hover:translate-x-0.5 hover:translate-y-0.5 transition-all duration-150 shadow-accent-hard`}
+        className={`flex flex-row justify-center items-center gap-2 p-4 border-4 border-accent bg-dark hover:translate-x-0.5 hover:translate-y-0.5 transition-all duration-150 shadow-accent-hard cursor-pointer`}
       >
         <span
           className={`${pixel.className} text-light text-xl font-bold`}
@@ -114,7 +114,7 @@ const ContactCard = () => {
             ? "SENDING..."
             : "SEND"}
         </span>
-        <Mail className="group-hover:rotate-12 transition-transform duration-200" />
+        <Send className="group-hover:rotate-12 transition-transform duration-200" />
       </button>
     </form>
   );

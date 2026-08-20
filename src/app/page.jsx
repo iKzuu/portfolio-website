@@ -4,6 +4,7 @@ import ProjectSection from "@/components/sections/ProjectSection";
 import AboutSection from "@/components/sections/AboutSection";
 import Marquee from "@/components/animations/Marquee/Marquee";
 import ContactSection from "@/components/sections/ContactSection";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
 
@@ -29,6 +30,7 @@ export default function Home() {
       <div id="contact" className={`${sectionPadding} z-10`}>
         <ContactSection />
       </div>
+      <Footer />
     </main>
   );
 }
