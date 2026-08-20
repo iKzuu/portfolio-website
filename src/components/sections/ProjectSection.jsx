@@ -2,9 +2,9 @@ import { pixel } from "@/lib/font";
 import PixelText from "../ui/PixelText";
 import ProjectCard from "../ui/ProjectCard";
 import Link from "next/link";
-import { ArrowBigRight } from "lucide-react";
 import { getProjects } from "@/services/projectService";
 import { getProjectsImageUrl } from "@/lib/storage";
+import { ChevronRight } from "pixelarticons/react";
 
 const ProjectSection = async () => {
   const projects = await getProjects({ limit: 2 });
@@ -19,9 +19,19 @@ const ProjectSection = async () => {
           <ProjectCard key={project.id} image={getProjectsImageUrl(project.image_key)} name={project.name} description={project.description} href={project.github_url} tech={project.tech} />
         ))}
       </div>
-      <Link href="/projects" className="group flex flex-row gap-2 p-4 mt-4 md:mt-0 items-center bg-light w-fit">
-        <span className={`${pixel.className} text-dark text-lg md:text-xl lg:text-2xl font-semibold`}>See All Projects</span>
-        <ArrowBigRight color="#74aeff" className="group-hover:animate-arrow-move" />
+      <Link
+        href="/projects"
+        className="group relative mt-4 flex w-fit items-stretch border-4 border-black bg-light text-dark shadow-[6px_6px_0px_#74aeff] transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[9px_9px_0px_#74aeff] active:translate-x-0 active:translate-y-0 active:shadow-[2px_2px_0px_#74aeff]"
+      >
+        <div className="flex flex-col justify-center px-5 py-3 md:px-6">
+          <span className={`${pixel.className} text-xs font-semibold text-accent`}>EXPLORE</span>
+          <span className={`${pixel.className} text-lg font-bold md:text-xl lg:text-2xl`}>See All Projects</span>
+        </div>
+
+        <div className="flex items-center border-l-4 border-black bg-accent px-4">
+          <ChevronRight className="text-light size-7 transition-transform duration-200 group-hover:animate-arrow-move" />
+        </div>
+        {/* <ArrowBigRight color="#74aeff" className="group-hover:animate-arrow-move" /> */}
       </Link>
     </section>
   );

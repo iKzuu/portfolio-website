@@ -1,8 +1,7 @@
 import Link from "next/link";
-import { ArrowUp } from "lucide-react";
 import { pixel } from "@/lib/font";
-import { SiGithub, SiInstagram } from "react-icons/si";
 import PixelText from "../ui/PixelText";
+import { ArrowBarUp, Github, Instagram } from "pixelarticons/react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -46,7 +45,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             aria-label="GitHub"
             className="border-2 border-black bg-dark p-3 text-light shadow-accent-sm-hard transition-transform hover:-translate-y-1">
-                <SiGithub />
+                <Github />
             </Link>
 
             <Link 
@@ -55,14 +54,14 @@ const Footer = () => {
             rel="noopener noreferrer"
             aria-label="Instagram"
             className="border-2 border-black bg-dark p-3 text-light shadow-accent-sm-hard transition-transform hover:-translate-y-1">
-                <SiInstagram />
+                <Instagram />
             </Link>
 
             <Link 
             href="/#hero"
             aria-label="Back to top"
             className="border-2 border-black bg-dark p-3 text-light shadow-accent-sm-hard transition-transform hover:-translate-y-1">
-                <ArrowUp />
+                <ArrowBarUp />
             </Link>
           </div>
 

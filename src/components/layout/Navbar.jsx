@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 import NavLink from "../ui/NavLink";
-import { Computer, Home, Mail, User } from "lucide-react";
+import { Briefcase, CircleInfo, Home, Mail } from 'pixelarticons/react'
 
 const sections = [
     "hero",
@@ -39,8 +39,8 @@ const Navbar = () => {
     return (
         <nav className="flex flex-row items-center w-auto h-20 rounded-sm overflow-hidden bg-dark shadow-black-soft">
             <NavLink href="#hero" title="Home" Icon={Home} active={active === "hero"}/>
-            <NavLink href="#about" title="About" Icon={User} active={active === "about"}/>
-            <NavLink href="#projects" title="Projects" Icon={Computer} active={active === "projects"}/>
+            <NavLink href="#about" title="About" Icon={CircleInfo} active={active === "about"}/>
+            <NavLink href="#projects" title="Projects" Icon={Briefcase} active={active === "projects"}/>
             <NavLink href="#contact" title="Contact" Icon={Mail} active={active === "contact"}/>
         </nav>
     );
