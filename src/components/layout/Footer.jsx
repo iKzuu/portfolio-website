@@ -2,6 +2,7 @@ import Link from "next/link";
 import { pixel } from "@/lib/font";
 import PixelText from "../ui/PixelText";
 import { ArrowBarUp, Github, Instagram } from "pixelarticons/react";
+import CvPreview from "../cv/CvPreview";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -36,6 +37,8 @@ const Footer = () => {
             <Link href="/#contact" className="hover:text-accent transition-colors">
               Contact
             </Link>
+
+            <CvPreview variant="footer"/>
           </nav>
 
           <div className="flex items-center gap-3">
@@ -49,7 +52,7 @@ const Footer = () => {
             </Link>
 
             <Link 
-            href="https://github.com/iKzuu"
+            href="https://www.instagram.com/ikzuu_?igsh=MXBsajI5a2dmYnBr"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
