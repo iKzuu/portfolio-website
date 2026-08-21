@@ -93,7 +93,7 @@ const CvModal = ({ isOpen, mounted, onClose }) => {
             >
               <Download className="size-5 shrink-0" />
 
-              <span className="hidden whitespace-nowrap sm:inline">Download CV</span>
+              <span className="hidden whitespace-nowrap sm:inline">Download</span>
             </a>
 
             {/* Close */}
