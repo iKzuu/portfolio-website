@@ -54,20 +54,20 @@ export const cvData = {
       title:
         "Learn Back-End Development for Beginners with JavaScript",
       date: "Feb 2025",
-      issuerUrl: "https://www.dicoding.com/",
+      issuerUrl: "https://www.dicoding.com/certificates/GRX53Q333Z0M",
     },
     {
       issuer: "Dicoding Academy",
       title: "Learn Basic Programming with JavaScript",
       date: "Dec 2024",
-      issuerUrl: "https://www.dicoding.com/",
+      issuerUrl: "https://www.dicoding.com/certificates/53XEQ7O69XRN",
     },
     {
       issuer: "Dicoding Academy",
       title:
         "Cloud Practitioner Essentials (AWS Cloud Basics)",
       date: "Aug 2024",
-      issuerUrl: "https://www.dicoding.com/",
+      issuerUrl: "https://www.dicoding.com/certificates/KEXL1W0OYXG2",
     },
   ],
 
