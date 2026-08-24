@@ -2,7 +2,7 @@ export const cvData = {
   name: "ANANG SETIAJI",
 
   contact: {
-    phone: "+62 821 3862 0324",
+    phone: "+62 851 1702 8376",
     email: "anang.setiaji10@gmail.com",
     website: "anangsetiaji.my.id",
     location: "Surakarta, Central Java, Indonesia",
