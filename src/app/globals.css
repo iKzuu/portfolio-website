@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+@plugin "daisyui" {
+  themes: false;
+}
 
 @theme {
   --color-dark: #272727;
@@ -47,4 +50,99 @@ html {
 body {
   background: var(--color-dark);
   color: var(--color-light);
+}
+
+/* Mobile Project Demo Style */
+
+.device-scale {
+  --device-scale: 0.72;
+
+  position: relative;
+
+  width: calc(393px * var(--device-scale));
+  height: calc(852px * var(--device-scale));
+}
+
+.device-phone {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 393px;
+  height: 852px;
+
+  transform: scale(var(--device-scale));
+  transform-origin: top left;
+
+  padding: 8px;
+
+  background: #111;
+  border: 5px solid #555;
+
+  border-radius: 68px;
+
+  box-sizing: border-box;
+}
+
+.device-screen {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  background: white;
+
+  border-radius: 57px;
+}
+
+.device-island {
+  position: absolute;
+
+  z-index: 50;
+
+  top: 20px;
+  left: 50%;
+
+  width: 112px;
+  height: 34px;
+
+  transform: translateX(-50%);
+
+  background: black;
+
+  border-radius: 999px;
+}
+
+.device-app {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  top: 52px;
+  bottom: 34px;
+
+  overflow: hidden;
+
+  background: white;
+}
+
+@media (min-width: 480px) {
+  .device-scale {
+    --device-scale: 0.78;
+  }
+}
+
+@media (min-width: 768px) {
+  .device-scale {
+    --device-scale: 0.82;
+  }
+}
+
+@media (min-width: 1280px) {
+  .device-scale {
+    --device-scale: 0.88;
+  }
 }

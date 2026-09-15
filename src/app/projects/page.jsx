@@ -35,7 +35,7 @@ export default async function ProjectsPage() {
         {projects.length > 0 ? (
           <div className="grid grid-cccols-1 gap-6 lg:grid-cols-2">
             {projects.map((project) => (
-              <ProjectCard key={project.id} image={getProjectsImageUrl(project.image_key)} name={project.name} description={project.description} href={project.github_url} tech={project.tech} />
+              <ProjectCard key={project.id} image={getProjectsImageUrl(project.image_key)} name={project.name} description={project.description} href={project.github_url} demoUrl={project.demo_url} demoType={project.demo_type} tech={project.tech} />
             ))}
           </div>
         ) : (

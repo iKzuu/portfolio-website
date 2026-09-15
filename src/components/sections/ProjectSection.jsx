@@ -16,7 +16,7 @@ const ProjectSection = async () => {
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {projects.map((project) => (
-          <ProjectCard key={project.id} image={getProjectsImageUrl(project.image_key)} name={project.name} description={project.description} href={project.github_url} tech={project.tech} />
+          <ProjectCard key={project.id} image={getProjectsImageUrl(project.image_key)} name={project.name} description={project.description} href={project.github_url} demoUrl={project.demo_url} demoType={project.demo_type} tech={project.tech} />
         ))}
       </div>
       <Link
